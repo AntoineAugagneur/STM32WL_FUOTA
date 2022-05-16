@@ -1,0 +1,46 @@
+modifications to enable FUOTA
+
+Update Agent	|	SBSFU	(Secure Boot Secure Firmware Update)
+		|	SE	(Secure Engine)
+		|	KMS	(Key Management Service)
+
+
+### Gloable steps
+
+> generate in 1_image_SECoreBin project		SE_Core.bin				
+
+> generate in 1_image_BFU project		SE_interface_appli.o			
+						Project.bin		
+
+> generate in LoRaWAN_End_Node project		LoRaWAN_End_Node.bin			
+						LoRaWAN_End_Node.sfb		-> to send via FUOTA
+						BFU_LoRaWAN_End_Node.bin	-> flash the device with it, the first time
+
+> get Linker_Common								-> link the 3 previous projects together
+
+
+Modifications to have all the projects in standalone mode
+
+> LIB_Standalone folder creation 		in STM32WL_FUOTA folder
+> change the path				in prebuild.sh (line 8)
+
+Cancel modifications to turn the project into a all standalone project
+--> too much issues
+
+New solution
+
+> folder Middleware				copy-past (with only needed sub-folders) in standalone folder
+> folder Driver					copy-past (with only needed sub-folders) in standalone folder
+> folder Utilities				copy-past (with only needed sub-folders) in standalone folder
+> folder with the 3 projects			added in STM32WL_FUOTA\Projects\NUCLEO-WL55JC\Applications\LoRaWAN_FUOTA
+
+Then the bootloader firmware and the fuota sendable firmware are in folder:
+STM32WL_FUOTA\Projects\NUCLEO-WL55JC\Applications\LoRaWAN_FUOTA\LoRaWAN_End_Node\STM32CubeIDE\Binary
+
+
+V1 creation
+
+> SendTxData()					modified to make it send 0x01 on port 1
+
+
+		
