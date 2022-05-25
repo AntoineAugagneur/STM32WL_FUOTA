@@ -480,7 +480,7 @@ static void SendTxData(void)
   AppData.Port = LORAWAN_USER_APP_PORT;
   uint32_t j = 0;
   AppData.Buffer[j++] = 0;
-  AppData.Buffer[j++] = 2;
+  AppData.Buffer[j++] = 3;
   AppData.BufferSize = j;
   // Payload for V1 firmware ----------------------------------------------
 

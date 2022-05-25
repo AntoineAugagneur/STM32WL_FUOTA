@@ -3,10 +3,10 @@ Magic: b'SFU1'!!
 Magic: b'SFU1'!!
 number of segment :6
 0x802b400
-0x803c550
-0x803c558
-0x803c704
-0x803c710
+0x803c568
+0x803c570
+0x803c71c
+0x803c720
 number of segment :6
 0x8000138
 0x80085d0
@@ -17,4 +17,4 @@ Merging
 SBSFU Base = 0x8000000
 Writing header = 0x802b000
 APPLI Base = 0x802b200
-Writing to ../../STM32CubeIDE/Binary/BFU_LoRaWAN_End_Node.bin 247568
+Writing to ../../STM32CubeIDE/Binary/BFU_LoRaWAN_End_Node.bin 247584

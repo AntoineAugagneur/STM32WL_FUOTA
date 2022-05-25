@@ -1,1 +1,1 @@
-fw_update_agent.c:87:6:FwUpdateAgent_Run	336	static,ignoring_inline_asm
+fw_update_agent.c:87:6:FwUpdateAgent_Run	336	static

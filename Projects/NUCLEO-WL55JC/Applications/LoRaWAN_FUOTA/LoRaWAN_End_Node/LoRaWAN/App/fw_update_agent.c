@@ -116,7 +116,8 @@ void FwUpdateAgent_Run(void)
   if (status == FLASH_OK)
   {
     /* System Reboot*/
-    NVIC_SystemReset();
+    // NVIC_SystemReset();
+    APP_LOG(TS_OFF, VLEVEL_M, "Ready to install the new image at next reset\r\n");
   }
   else
   {
