@@ -90,7 +90,7 @@ Application/User/LoRaWAN/Target/frag_decoder_if.o: \
  ../../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.h \
  ../../Core/Inc/flash_if.h ../../Core/Inc/platform.h \
  ../../LoRaWAN/App/fw_update_agent.h \
- ../../LoRaWAN/Target/frag_decoder_if.h
+ ../../LoRaWAN/Target/frag_decoder_if.h ../../LoRaWAN/App/lora_app.h
 
 ../../Core/Inc/platform.h:
 
@@ -279,3 +279,5 @@ C:/Users/admin/Documents/GitHub/STM32WL_FUOTA/Projects/NUCLEO-WL55JC/Application
 ../../LoRaWAN/App/fw_update_agent.h:
 
 ../../LoRaWAN/Target/frag_decoder_if.h:
+
+../../LoRaWAN/App/lora_app.h:

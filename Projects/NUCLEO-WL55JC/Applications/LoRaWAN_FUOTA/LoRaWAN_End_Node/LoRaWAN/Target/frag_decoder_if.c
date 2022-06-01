@@ -28,6 +28,7 @@
 #include "fw_update_agent.h"
 
 /* USER CODE BEGIN Includes */
+#include "lora_app.h"
 
 /* USER CODE END Includes */
 
@@ -244,6 +245,8 @@ void FRAG_DECODER_IF_OnDone(int32_t status, uint32_t size)
   APP_LOG(TS_OFF, VLEVEL_M, "STATUS      : %d\r\n", status);
 
 #if (INTEROP_TEST_MODE == 0)
+  /* Send a frame to signal the AS that the end-device has already rebuilt the whole data block */
+  SendTXStopFrag();
   /* Do a request to Run the Secure boot - The file is already in flash */
   FwUpdateAgent_Run();
 #else

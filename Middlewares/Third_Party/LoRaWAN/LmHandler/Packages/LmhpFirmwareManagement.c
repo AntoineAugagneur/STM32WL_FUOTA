@@ -238,7 +238,10 @@ static void LmhpFirmwareManagementOnMcpsIndication(McpsIndication_t *mcpsIndicat
           SysTime_t curTime = { .Seconds = 0, .SubSeconds = 0 };
           curTime = SysTimeGet();
 
-          rebootTimeAns = rebootTimeReq - curTime.Seconds;
+          rebootTimeAns = rebootTimeReq - (curTime.Seconds - UNIX_GPS_EPOCH_OFFSET);
+          //MW_LOG(TS_OFF, VLEVEL_M, "rebootTimeReq= %d \r\n",rebootTimeReq);
+          //MW_LOG(TS_OFF, VLEVEL_M, "curTime.Seconds= %d \r\n",curTime.Seconds);
+          //MW_LOG(TS_OFF, VLEVEL_M, "rebootTimeAns= %d \r\n",rebootTimeAns);
           if (rebootTimeAns > 0)
           {
             /* Start session start timer */

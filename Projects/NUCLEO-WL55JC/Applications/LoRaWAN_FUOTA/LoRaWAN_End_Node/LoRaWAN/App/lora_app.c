@@ -480,7 +480,7 @@ static void SendTxData(void)
   AppData.Port = LORAWAN_USER_APP_PORT;
   uint32_t j = 0;
   AppData.Buffer[j++] = 0;
-  AppData.Buffer[j++] = 3;
+  AppData.Buffer[j++] = 4;
   AppData.BufferSize = j;
   // Payload for V1 firmware ----------------------------------------------
 
@@ -515,6 +515,27 @@ static void OnClassChange(DeviceClass_t deviceClass )
   {
     UTIL_TIMER_Start(&TxTimer);
   }
+}
+
+void SendTXStopFrag(void){
+
+	// send stop session
+	UTIL_TIMER_Time_t nextTxIn = 0;
+	AppData.Port = 186;
+	uint32_t i = 0;
+	AppData.Buffer[i++] = 0;
+	AppData.Buffer[i++] = 1;
+	AppData.BufferSize = i;
+
+	if (LORAMAC_HANDLER_SUCCESS == LmHandlerSend(&AppData, LORAWAN_DEFAULT_CONFIRMED_MSG_STATE, &nextTxIn, false))
+	  {
+		// APP_LOG(TS_ON, VLEVEL_L, "SEND REQUEST\r\n");
+		APP_LOG(TS_OFF, VLEVEL_L, "\r\nFRAME SENT (added function to stop the fragmentation process)\r\n");
+	  }
+	  else if (nextTxIn > 0)
+	  {
+	    APP_LOG(TS_ON, VLEVEL_L, "Next Tx in  : ~%d second(s)\r\n", (nextTxIn / 1000));
+	  }
 }
 
 static void OnTxTimerEvent(void *context)
