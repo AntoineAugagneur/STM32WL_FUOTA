@@ -11,9 +11,9 @@ This project shall be used with a NUCLEO-WL55JC1 board.
 ### End-Node setup: how to use it ?
 1. Build the **_1_Image_SECoreBin_** project.
 2. Build the **_1_Image_BFU_** project.
-3. Custom the **_LoRaWAN_End_Node_** project with you application. Then, build it. It will generate:
-  1. BFU_LoRaWAN_End_Node.bin (you shall use this file only one time: at the initial firmware upload)
-  2. LoRaWAN_End_Node.sfb (it is the file you should fragment and then send to your end-device via LoRaWAN FUOTA process)
+3. Custom the **_LoRaWAN_End_Node_** project with your application. Then, build it. It will generate:
+	>BFU_LoRaWAN_End_Node.bin (you shall use this file only one time: at the initial firmware upload)
+	>LoRaWAN_End_Node.sfb (it is the file you should fragment and then send to your end-device via LoRaWAN FUOTA process)
 
 ## End-Node messaging packages
 
