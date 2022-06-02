@@ -34,7 +34,8 @@ Its location:	STM32WL-standalone\LoRaWAN\App
 ### Firmware Management
 - Package version implemented:          1 **/!\ proof-of-concept implementation only**
 - Dedicated LoRaWAN port:               203
-- Added modification:			The reboot is not lanched right after the end of the fragmentation session. You can use Firmware management commands to schedule a reboot and then plan WHEN you want to update your end-device.
+- Added modification:			The reboot is not launched right after the end of the fragmentation session. You can use Firmware management commands to schedule a reboot and then plan WHEN you want to update your end-device.
+					
 
 
 ## Want to learn more about LoRaWAN advanced features ?
