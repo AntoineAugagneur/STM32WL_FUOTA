@@ -4114,7 +4114,7 @@ static void OnMacProcessNotify(void)
   APP_LOG(TS_OFF, VLEVEL_M, "APP_VERSION:        V%X.%X.%X\r\n",
  802ce70:	2501      	movs	r5, #1
  802ce72:	2200      	movs	r2, #0
- 802ce74:	2304      	movs	r3, #4
+ 802ce74:	2305      	movs	r3, #5
  802ce76:	e9cd 5301 	strd	r5, r3, [sp, #4]
  802ce7a:	4611      	mov	r1, r2
  802ce7c:	4b34      	ldr	r3, [pc, #208]	; (802cf50 <LoRaWAN_Init+0x100>)
