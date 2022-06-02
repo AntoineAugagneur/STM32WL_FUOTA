@@ -8,10 +8,9 @@ The FUOTA project is a single-core project. The global FUOTA project is a folder
 ### End-Node project
 This project shall be used with a NUCLEO-WL55JC1 board.
 
-### End-Node setup
-A single file is used to setup all the LoRaWAN settings (Keys, Class, Activation method, etc.).
-- The file:	General_Setup.h
-- Its location:	STM32WL-standalone\LoRaWAN\App
+### End-Node setup: how to use it ?
+1. ff
+2. ff
 
 ## End-Node messaging packages
 
