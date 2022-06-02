@@ -9,12 +9,12 @@ The FUOTA project is a single-core project. The global FUOTA project is a folder
 This project shall be used with a NUCLEO-WL55JC1 board.
 
 ### End-Node setup: how to use it ?
-1. Build the 1_Image_SECoreBin project.
-2. Build the 1_Image_BFU project.
-3. Custom the LoRaWAN_End_Node project with you application.
+1. Build the **_1_Image_SECoreBin_** project.
+2. Build the **_1_Image_BFU_** project.
+3. Custom the **_LoRaWAN_End_Node_** project with you application.
 4. Build the LoRaWAN_End_Node project. It will generate:
-  a. BFU_LoRaWAN_End_Node.bin (you shall use this file only one time: at the initial firmware upload)
-  b. LoRaWAN_End_Node.sfb (it is the file you should fragment and then send to your end-device via LoRaWAN FUOTA process)
+  - BFU_LoRaWAN_End_Node.bin (you shall use this file only one time: at the initial firmware upload)
+  - LoRaWAN_End_Node.sfb (it is the file you should fragment and then send to your end-device via LoRaWAN FUOTA process)
 
 ## End-Node messaging packages
 
