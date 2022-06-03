@@ -13,7 +13,7 @@ This project shall be used with a NUCLEO-WL55JC1 board.
 - Build the **_1_Image_BFU_** project.
 - Custom the **_LoRaWAN_End_Node_** project with your application. Then, build it. It will generate:
   - **BFU_LoRaWAN_End_Node.bin** (you shall use this file only one time: at the initial firmware upload)
-  - **LoRaWAN_End_Node.sfb** (it is the file you should fragment and then send to your end-device via LoRaWAN FUOTA process). You can change the version of your App in the _**lora_app_version.h_** file.
+  - **LoRaWAN_End_Node.sfb** (it is the file you should fragment and then send to your end-device via LoRaWAN FUOTA process). You can change the version of your App in the **lora_app_version.h** file.
 
 ## End-Node messaging packages
 
