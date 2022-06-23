@@ -29,8 +29,7 @@ This project shall be used with a NUCLEO-WL55JC1 board.
 - Package version implemented:          1
 - Dedicated LoRaWAN port:               201
 - Fragmentation algorithm implemented:  FEC (Forward Error Correction)
-- Available fragmentation mode:         Interop (This mode represents the minimum test proving that the end device is able to receive a data block file from the server.
-                                        It doesn’t allow you to perform FUOTA)
+- Available fragmentation mode:         Non-Interop (Default mode. This mode allows you to perform FUOTA). Interop mode is also available.
 - Added modification:
   - The ST package implements the version 1 of the Fragmented data block layer messaging package. That means there is no _FragDataBlockReceivedReq_ command used by the end-device to signal the fragmentation server that a data block has been completely received (command only offered by the version 2 of the package). A dedicated function has been added. When the whole data block has been rebuilt, `SendTXStopFrag()` sends 0x0001 on port 186. Payload and port are arbitrary chosen and can be adjusted. To stop sending fragments, your fragmentation server should be able to understand this message.
 
