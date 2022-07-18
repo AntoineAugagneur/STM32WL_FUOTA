@@ -476,13 +476,13 @@ static void SendTxData(void)
 
   */
 
-  // Payload for V1 firmware ----------------------------------------------
-  AppData.Port = LORAWAN_USER_APP_PORT;
+  // Payload for V2 firmware ----------------------------------------------
+  AppData.Port = 2;
   uint32_t j = 0;
   AppData.Buffer[j++] = 0;
-  AppData.Buffer[j++] = 4;
+  AppData.Buffer[j++] = 2;
   AppData.BufferSize = j;
-  // Payload for V1 firmware ----------------------------------------------
+  // Payload for V2 firmware ----------------------------------------------
 
 
 #endif /* CAYENNE_LPP */
